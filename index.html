@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rolls-Royce</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <link href="css/accordion.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+        <link rel="stylesheet" type="text/css" href="css/examples.css" />
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/fullpage.js"></script>
+        <script type="text/javascript" src="js/examples.js"></script>
+        <script src="js/accordion.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                 var myFullpage = new fullpage('#fullpage', {
+					anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', 'lastPage'],
+					menu: '#menu',
+					navigation: true,
+					navigationPosition: 'right',
+					navigationTooltips: ["메인페이지", "모델라인업", "회사소개", "BESPOKE", "OWERSHIP", "NEWS", "FOOTER"],
+					slidesNavigation: true,
+					lazyLoad: true
+                });
+                var slide = $("#bespoke_slide1, #bespoke_slide2, #bespoke_slide3, #bespoke_slide4, #bespoke_slide5");
+		
+                slide.click(function() {
+                    slide.not($(this)).stop().animate({"width":"10%"}, 700);
+                    $(this).stop().animate({"width":"60%"}, 700);
+                    
+                    $(this).find(".cover").css({"display" : "none"});
+                    slide.not($(this)).find(".cover").css({"display" : "block"});
+					
+						$("#owership_top").hover(function() {
+							$("#owership_top img").stop().animate({ 
+								'width' : "110%",
+								'height' : "110%",
+								'left': '-5%',
+								'top': '-5%'
+						}, 300);
+					}, function() {
+						$("#owership_top img").stop().animate({ 
+							'width' : "100%",
+							'height' : "100%",
+							'left': '0',
+							'top': '0'
+						}, 300);
+					});
+					
+					$("#owership_left").hover(function() {
+						$("#owership_left img").stop().animate({ 
+							'width' : "110%",
+							'height' : "110%",
+							'left': '-5%',
+							'top': '-5%'
+						}, 300);
+					}, function() {
+						$("#owership_left img").stop().animate({ 
+							'width' : "100%",
+							'height' : "100%",
+							'left': '0',
+							'top': '0'
+						}, 300);
+					});
+					
+					$("#owership_right").hover(function() {
+						$("#owership_right img").stop().animate({ 
+							'width' : "110%",
+							'height' : "110%",
+							'left': '-5%',
+							'top': '-5%'
+						}, 300);
+					}, function() {
+						$("#owership_right img").stop().animate({ 
+							'width' : "100%",
+							'height' : "100%",
+							'left': '0',
+							'top': '0'
+						}, 300);
+					});
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+    	<!--<div id="accordion">        
+            <h3><a href="#">모델라인업</a></h3>
+                <div>
+                    <ul>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                    </ul>
+                </div>
+            
+            <h3><a href="#">회사소개</a></h3>
+                <div>
+                	<ul>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                    </ul>
+                </div>
+            
+            <h3><a href="#">BESPOKE</a></h3>
+            <div>
+            	<ul>
+                    <li><a href="#">text</a></li>
+                    <li><a href="#">text</a></li>
+                    <li><a href="#">text</a></li>
+                </ul>
+            </div>
+            
+            <h3><a href="#">인증중고차</a></h3>
+            <div>
+            	<ul>
+                    <li><a href="#">text</a></li>
+                    <li><a href="#">text</a></li>
+                </ul>
+            </div>
+            
+            <h3><a href="#">차량커스터마이징</a></h3>
+            <div>
+            	<ul>
+                    <li><a href="#">text</a></li>
+                    <li><a href="#">text</a></li>
+                    <li><a href="#">text</a></li>
+                    <li><a href="#">text</a></li>
+                </ul>
+            </div>
+            
+            <h3><a href="#">금융서비스</a></h3>
+                <div>
+                	<ul>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                        <li><a href="#">text</a></li>
+                    </ul>
+                </div>
+        </div>--><!--accordion-->
+        
+        
+        <div id="wrap">
+            <div id="navi">
+                <p class="nav_left_article">Rolls-Royce Mortor Car Seoul</p><!--#nav_left_article-->
+    
+                <div id="logo">
+                    <a href="#"><img src="images/logo.png" alt="" /></a>
+                </div><!--#logo-->
+    
+                <ul id="nav_menu">
+                    <li><a href="#"><img src="images/lang.png" alt="" /></a></li>
+                    <li><a href="#" id="nav_menu_btn"><img src="images/menu.png" alt="" /></a></li>
+                </ul><!--#nav_menu-->
+            </div><!--#navi-->
+            
+            <div id="fullpage">
+                <div class="section active" id="section0">
+                    <div class="slide" id="slide1">
+                        <div id="main_img1">
+                            <div class="img_text_box1">
+                                <p class="img_title">GHOST BLACK BADGE</p><!--.img_title-->
+                                <p class="img_article">태양이 지고 어둠이 찾아옵니다.</p><!--.img_article-->
+                                <p class="ghost_btn_text"><a href="#">Discover more</a></p>
+                            </div><!--#text_box-->
+                        </div><!--#main_img-->
+                    </div><!--#slide1-->
+    
+                    <div class="slide" id="slide2">
+                        <div id="main_img2">
+                            <div class="img_text_box2">
+                                <p class="img_title">PHANTOM TRANQUILLITY</p><!--.img_title-->
+                                <p class="img_article">존재만으로 위대함을 위한 영감이 되는 이들.</p><!--.img_article-->
+                                <p class="ghost_btn_text"><a href="#">Discover more</a></p>
+                            </div><!--#text_box-->
+                        </div><!--#main_img-->
+                    </div><!--#slide2-->
+    
+                    <div class="slide" id="slide3">
+                        <div id="main_img3">
+                            <div class="img_text_box3">
+                                <p class="img_title">CULLINAN</p><!--.img_title-->
+                                <p class="img_article">최고라는 한계를 뛰어넘는다</p><!--.img_article-->
+                                <p class="ghost_btn_text"><a href="#">Discover more</a></p>
+                            </div><!--#text_box-->
+                        </div><!--#main_img3-->
+                    </div><!--#slide3-->
+                </div><!--#section0-->
+    
+                <div class="section" id="section1">
+                    <div id="model_wrap">
+                        <p class="model_title">ROLLS ROYCE MODEL</p><!--#model-->
+    
+                        <div id="model_box">
+                            <div id="model_first">
+                                <p class="lineup_title">Rolls Royce</p>
+                                <p class="lineup_article">PHANTOM</p>
+                                <img src="images/car1.png">
+                                <p class="view_offer"><a href="#">VIEW OFFERS ›</a></p>
+                            </div><!--#model_first-->
+    
+                            <div id="model_second">
+                                <p class="lineup_title">Rolls Royce</p>
+                                <p class="lineup_article">WRAITH</p>
+                                <img src="images/car2.png">
+                                <p class="view_offer"><a href="#">VIEW OFFERS ›</a></p>
+                            </div><!--#model_second-->
+    
+                            <div id="model_third">
+                                <p class="lineup_title">Rolls Royce</p>
+                                <p class="lineup_article">DAWN</p>
+                                <img src="images/car3.png">
+                                <p class="view_offer"><a href="#">VIEW OFFERS ›</a></p>
+                            </div><!--#model_third-->
+    
+                            <div id="model_four">
+                                <p class="lineup_title">Rolls Royce</p>
+                                <p class="lineup_article">BLACK BADGE</p>
+                                <img src="images/car4.png">
+                                <p class="view_offer"><a href="#">VIEW OFFERS ›</a></p>
+                            </div><!--#model_four-->
+                        </div><!--#model_box-->
+                        
+                        <div id="model_more_box"><a href="#">모델라인업 ›</a></div><!--#model_more_box-->
+                    </div><!--#model_wrap-->
+                </div>
+    
+                <div class="section" id="section2">
+                    <div id="about_us_wrap">
+                        <div id="about_left_box">
+                            <p class="a_left_title">
+                                Rolls-Royce
+                                Mortor Car
+                                Seoul
+                            </p><!--.a_left_title-->
+                            <p class="a_left_article">
+                                지난 30년간 국내 수입차의 역사와 함께해온 코오롱은 
+                                15년전 국내에 처음 롤스로이스를 런칭한 이후로 차량관련 
+                                전문 지식과 고객관리 노하우를 바탕으로 신뢰가 가는 상담 
+                                파트너가 되기 위해 최선을 다하고 있습니다. 국내에 극소수만이 
+                                소유한 롤스로이스 오너의 대부분은 롤스로이스 모터카 서울과 
+                                인연을 맺고 있습니다. 그 동안 고객님이 경험하신 모든 브랜드와는 
+                                차원이 다른 품격과 즐거움으로 안내할 것을 약속 드립니다.
+                            </p><!--.a_left_article-->
+                        </div><!--#about_left_box-->
+    
+                        <div id="about_right_box">
+                        </div><!--#about_right_box-->
+                    </div><!--#about_wrap-->
+                </div>
+    
+                <div class="section" id="section3">
+                    <div id="bespoke_wrap">
+                        <p class="title">BESPOKE</p><!--.bespoke_title-->
+    
+                        <div id="bespoke_slide_wrap">
+                            <div id="bespoke_slide1">
+                                <div class="cover"></div>
+                                <p>주문제작</p>
+                            </div><!--#bespoke_slide1-->
+    
+    
+                            <div id="bespoke_slide2">
+                                <div class="cover"></div>
+                                <p>베니어</p>
+                            </div><!--#bespoke_slide1-->
+    
+    
+                            <div id="bespoke_slide3">
+                                <div class="cover"></div>
+                                <p>장인</p>
+                            </div><!--#bespoke_slide1-->
+    
+    
+                            <div id="bespoke_slide4">
+                                <div class="cover"></div>
+                                <p>가죽</p>
+                            </div><!--#bespoke_slide1-->
+    
+    
+                            <div id="bespoke_slide5">
+                                <div class="cover"></div>
+                                <p>설계</p>
+                            </div><!--#bespoke_slide1-->
+                        </div><!--#bespoke_slide_wrap-->
+                    </div><!--#bespoke_wrap-->
+                </div>
+    
+                <div class="section" id="section4">
+                    <div id="owership_wrap">
+                        <p class="title">OWERSHIP</p>
+    
+                        <div id="owership_top">
+                            <a href="#">
+                            <img src="images/owner_img1_3.jpg" alt="" />
+                            <p class="owership_text">외관디자인</p>
+                            </a>
+                        </div>
+                        
+                        
+                        <div id="owership_left">
+                            <a href="#">
+                            <img src="images/owner_img2.jpg" alt="" />
+                            <p class="owership_text2">실내디자인</p>
+                            </a>
+                        </div>
+                    
+                        <div id="owership_right">
+                            <a href="#">
+                            <img src="images/owner_img3.jpg" alt="" />
+                            <p class="owership_text">투어링과 기술</p>
+                            </a>
+                        </div>
+                    </div><!--#owership_wrap-->
+                </div><!--#section4-->
+    
+                <div class="section" id="section5">
+                    <div id="news_wrap">
+                        <p class="title">NEWS</p>
+    
+                        <div id="news_background">
+                            <div id="news_box">
+                                <div id="news_contents1">
+                                    <div id="news_img1"></div>
+    
+                                    <p class="news_title">
+                                        PHANTOM TRANQUILLITY
+                                    </p>
+    
+                                    <p class="news_article">
+                                        불가능을 고안하고 달성하는 이들을 위해 설계된 
+                                        Phantom Tranquillity는 럭셔리 세상에서 가장
+                                        귀하고 갈망 받는 물건이라는 Phantom의 위상을 
+                                        표현한 차량입니다.<br /><br />
+                                        
+                                        <a href="#">more...</a>
+                                    </p>
+                                </div><!--#news_contents1-->
+    
+                                <div id="news_contents2">
+                                    <div id="news_img2"></div>
+    
+                                    <p class="news_title">
+                                        롤스로이스 모터카 판교라운지 오픈
+                                    </p>
+    
+                                    <p class="news_article">
+                                        픈2019년 12월 10일, 롤스로이스 모터카 서울에서 
+                                        고성능 라인업 ‘블랙배지(Black Badge)’ 테마의 전시 공간인 
+                                        판교라운지를 공식 오픈 하였습니다. <br /><br />
+                                        
+                                        <a href="#">more...</a>
+                                    </p>
+                                </div><!--#news_contents2-->
+    
+                                <div id="news_contents3">
+                                    <div id="news_img3"></div>
+    
+                                    <p class="news_title">
+                                        롤스로이스모터카, ‘컬리넌 블랙 배지’ 발표
+                                    </p>
+    
+                                    <p class="news_article">
+                                        롤스로이스는 지난 2016년 레이스(Wraith)와 고스트(Ghost) 
+                                        블랙 배지 공개에 이어 2017년 던(Dawn) 블랙 배지를 추가했다. 
+                                        그리고 2019년 어두운 도시의 감성을 담은 ...<br /><br />
+                                        
+                                        <a href="#">more...</a>
+                                    </p>
+                                </div><!--#news_contents3-->
+                            </div><!--#news_box-->
+                        </div><!--#news_background-->
+                    </div><!--#news_wrap-->
+                </div>
+                
+                <div class="section fp-auto-height">
+                    <div id="content">
+                        <div id="footer_wrap">
+                            <div id="footer_1400">
+                                <p class="f_left">
+                                    사업자 등록번호 : 211-85-64732<br />
+                                    사업자 주소 : 서울특별시 강남구 도산대로 419
+                                </p>
+        
+                                <ul id="f_right">
+                                    <li>문의번호 : 02-2189-7151</li>
+                                    <li>이메일주소 : kolonmotors@kolon.com</li>
+                                </ul>
+        
+                                <ul id="f_center">
+                                    <li><a href="#">회사정보</a></li>
+                                    <li><a href="#">법적고지</a></li>
+                                    <li><a href="#">개인정보 처리방침</a></li>
+                                    <li><a href="#">쿠키정책</a></li>
+                                </ul>
+        
+                                <p class="f_btm">
+    코오롱글로벌㈜는 고객님의 개인정보를 소중하게 생각하고, 고객님의 개인정보를 보호하기 위하여 최선을 다해 노력하고 있습니다.<br />
+    코오롱글로벌㈜는 이를 위해 개인정보보호 관련 주요 법률인 ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’ 및 ‘개인정보보호법’을 준수하기 위하여 개인정보처리 방침을 제정하고 이를 준수하고 있으며, <br />
+    코오롱글로벌㈜의 ‘개인정보처리방침’을 홈페이지 (www.rolls-roycemotorcars-seoul.kr)에 공개하여 고객이 언제나 용이하게 열람할 수 있도록 하고 있습니다.
+                                </p>
+                            </div>
+                        </div><!--#footer_wrap-->
+                    </div><!--#content-->
+                </div><!--#section-->
+            </div><!--#fullpage-->
+        </div><!--#wrap-->
+    </body>
+</html>
